@@ -1,0 +1,46 @@
+<acceptance-test-run title="Depart by step" name="departByStep" steps="6" successful="6" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="4474">
+  <user-story id="scenario.DepartureTest" name="Departure test" path="scenario"/>
+  <tags>
+    <tag name="Departure test" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="1654">
+    <screenshots>
+      <screenshot image="screenshot-167684d4fb7290c80df43dba5f16984e5e2c96b248fe7b53fe541a8eea31fda713.png" source="screenshot-167684d4fb7290c80df43dba5f16984e5e2c96b248fe7b53fe541a8eea31fda713.html"/>
+      <screenshot image="screenshot-167684d4fb7290c80df43dba5f16984e5e2c96b248fe7b53fe541a8eea31fda714.png" source="screenshot-167684d4fb7290c80df43dba5f16984e5e2c96b248fe7b53fe541a8eea31fda714.html"/>
+    </screenshots>
+    <description>Gets car</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="389">
+    <screenshots>
+      <screenshot image="screenshot-41e9f8ba2eed488f60ffaaeab3fbc4dbbb1d04a207afd28886eaf783288821e315.png" source="screenshot-41e9f8ba2eed488f60ffaaeab3fbc4dbbb1d04a207afd28886eaf783288821e315.html"/>
+      <screenshot image="screenshot-41e9f8ba2eed488f60ffaaeab3fbc4dbbb1d04a207afd28886eaf783288821e316.png" source="screenshot-41e9f8ba2eed488f60ffaaeab3fbc4dbbb1d04a207afd28886eaf783288821e316.html"/>
+    </screenshots>
+    <description>Pays for shuttle</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="402">
+    <screenshots>
+      <screenshot image="screenshot-be2ada0fe8037f26516ad148bfc398445fdd55e91199bb72c52c8f9456f5887e17.png" source="screenshot-be2ada0fe8037f26516ad148bfc398445fdd55e91199bb72c52c8f9456f5887e17.html"/>
+      <screenshot image="screenshot-be2ada0fe8037f26516ad148bfc398445fdd55e91199bb72c52c8f9456f5887e18.png" source="screenshot-be2ada0fe8037f26516ad148bfc398445fdd55e91199bb72c52c8f9456f5887e18.html"/>
+    </screenshots>
+    <description>Passes luggage control</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="406">
+    <screenshots>
+      <screenshot image="screenshot-719a16020545490029676e1ade4ad43065ef5026a0da16944d380cf28abed22219.png" source="screenshot-719a16020545490029676e1ade4ad43065ef5026a0da16944d380cf28abed22219.html"/>
+      <screenshot image="screenshot-719a16020545490029676e1ade4ad43065ef5026a0da16944d380cf28abed22220.png" source="screenshot-719a16020545490029676e1ade4ad43065ef5026a0da16944d380cf28abed22220.html"/>
+    </screenshots>
+    <description>Passes gate control</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="813">
+    <screenshots>
+      <screenshot image="screenshot-39c42d5cc8b7b9968b667317dcc76f652a3053997129a2b1307790d85a068a3b21.png" source="screenshot-39c42d5cc8b7b9968b667317dcc76f652a3053997129a2b1307790d85a068a3b21.html"/>
+    </screenshots>
+    <description>Takes the place: &lt;span class=&apos;single-parameter&apos;&gt;[destination:LONDON] [departureTime:3.03.2013] [ticketClass:Econom] &lt;/span&gt;</description>
+  </test-step>
+  <test-step result="SUCCESS" duration="796">
+    <screenshots>
+      <screenshot image="screenshot-ceaec739da04e9057c0c3530d0efd09b1cd085b30529cea876bd495c99709d6d23.png" source="screenshot-ceaec739da04e9057c0c3530d0efd09b1cd085b30529cea876bd495c99709d6d23.html"/>
+    </screenshots>
+    <description>Enjoys the flight</description>
+  </test-step>
+</acceptance-test-run>

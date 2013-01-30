@@ -1,0 +1,13 @@
+<acceptance-test-run title="Populate passenger form" name="populatePassengerForm" steps="1" successful="1" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="4674">
+  <user-story id="scenario.DepartureTest" name="Departure test" path="scenario"/>
+  <tags>
+    <tag name="Departure test" type="story"/>
+  </tags>
+  <test-step result="SUCCESS" duration="4602">
+    <screenshots>
+      <screenshot image="screenshot-553b01e8e5aa6d86579177f41ab65e971c0f401146efe6983a150c3df147206311.png" source="screenshot-553b01e8e5aa6d86579177f41ab65e971c0f401146efe6983a150c3df147206311.html"/>
+      <screenshot image="screenshot-553b01e8e5aa6d86579177f41ab65e971c0f401146efe6983a150c3df147206312.png" source="screenshot-553b01e8e5aa6d86579177f41ab65e971c0f401146efe6983a150c3df147206312.html"/>
+    </screenshots>
+    <description>Completes passengers form: &lt;span class=&apos;parameters&apos;&gt;[name:John Doe] , [destination:LONDON] [departureTime:3.03.2013] [ticketClass:Econom] &lt;/span&gt;</description>
+  </test-step>
+</acceptance-test-run>
