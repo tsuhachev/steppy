@@ -1,6 +1,4 @@
-/**
- *
- */
+
 package page;
 
 import data.entity.Passenger;

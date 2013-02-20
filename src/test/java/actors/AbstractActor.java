@@ -22,7 +22,7 @@ public abstract class AbstractActor extends ScenarioSteps {
     super(pages);
   }
 
-  protected <T> T at(Class<? extends ScenarioSteps> tClass) {
-    return (T) new StepFactory(BaseTest.pages).getStepLibraryFor(tClass);
+  protected <S extends ScenarioSteps> S at(Class<S> tClass) {
+    return new StepFactory(BaseTest.pages).getStepLibraryFor(tClass);
   }
 }

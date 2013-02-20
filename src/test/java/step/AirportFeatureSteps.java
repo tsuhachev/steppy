@@ -1,16 +1,14 @@
-/**
- *
- */
+
 package step;
 
 import actors.passenger.IPassengerAtAirport;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
-import page.MyPageObject;
+import page.GooglePageObject;
 
 /**
- * <b>Description:</b> This class ...
+ * <b>Description:</b> This class represents step object available within Airport feature
  * <br/><br/><b>Data Model Entity:</b> none
  * <br/><br/><b>Configuration:</b> none
  * <br/><br/><b>Known Issues:</b> none
@@ -25,11 +23,11 @@ public class AirportFeatureSteps extends ScenarioSteps implements IPassengerAtAi
 
   @Override @Step
   public void passesLuggageControl() {
-     pages().get(MyPageObject.class).clear();
+     pages().get(GooglePageObject.class).clear();
   }
 
   @Override @Step
   public void passesGateControl() {
-    pages().get(MyPageObject.class).typeKeyword("gate control");
+    pages().get(GooglePageObject.class).typeKeyword("gate control");
   }
 }

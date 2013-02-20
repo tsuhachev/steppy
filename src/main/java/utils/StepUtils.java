@@ -1,5 +1,5 @@
 
-package helper;
+package utils;
 
 import data.entity.BaseEntity;
 import net.thucydides.core.annotations.Step;
@@ -10,19 +10,19 @@ import page.BasePageObject;
  *
  * @author Tim Sukhachev
  */
-public class StepHelper {
+public class StepUtils {
 
   /**
    * populates fields available within the pageObject with values set at entity
-   *
    * @param pageObject
    * @param entity
-   * @param <T>
+   * @param <P>
+   * @param <E>
    */
   @Step
-  public static <T extends BasePageObject> void populate(T pageObject, BaseEntity entity) {
-    for (String field : EntityHelper.getFields(entity.getClass())) {
-      pageObject.setValue(field, EntityHelper.getValueOfField(field, entity));
+  public static <P extends BasePageObject, E extends BaseEntity> void populate(P pageObject, E entity) {
+    for (String field : EntityUtils.getFields(entity.getClass())) {
+      pageObject.setValue(field, EntityUtils.getValueOfField(field, entity));
     }
   }
 }

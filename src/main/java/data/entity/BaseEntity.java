@@ -3,7 +3,7 @@
  */
 package data.entity;
 
-import helper.EntityHelper;
+import utils.EntityUtils;
 
 import java.util.List;
 
@@ -20,9 +20,9 @@ public class BaseEntity {
   @Override
   public String toString() {
     String str = "";
-    List<String> fields = EntityHelper.getFields(this.getClass());
+    List<String> fields = EntityUtils.getFields(this.getClass());
     for (String field : fields) {
-      String value = EntityHelper.getValueOfField(field, this);
+      String value = EntityUtils.getValueOfField(field, this);
       if (value != null) {
         str = str + "[" +field + ":" + value + "] ";
       }

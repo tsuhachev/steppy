@@ -4,7 +4,7 @@ import actors.passenger.IPassengerAtTaxi;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
-import page.MyPageObject;
+import page.GooglePageObject;
 
 /**
  * <b>Description:</b> This class ...
@@ -22,12 +22,12 @@ public class TaxiFeatureSteps extends ScenarioSteps implements IPassengerAtTaxi 
 
   @Override @Step
   public void getsCar() {
-    pages().get(MyPageObject.class).open();
-    pages().get(MyPageObject.class).typeKeyword("I know what I'm doing");
+    pages().get(GooglePageObject.class).open();
+    pages().get(GooglePageObject.class).typeKeyword("I know what I'm doing");
   }
 
   @Override @Step
   public void paysForShuttle() {
-    pages().get(MyPageObject.class).clickSearchButton();
+    pages().get(GooglePageObject.class).clickSearchButton();
   }
 }

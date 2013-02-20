@@ -49,7 +49,7 @@ public class BasePageObject extends PageObject {
         break;
       case CHECKBOX:
         Checkbox checkbox = new Checkbox(element);
-        checkbox.setChecked("true".equalsIgnoreCase(value) ? true : false);
+        checkbox.setChecked("true".equalsIgnoreCase(value));
         break;
       case SELECT:
         new Select(element).selectByVisibleText(value);
@@ -62,14 +62,13 @@ public class BasePageObject extends PageObject {
         webElementFacade.type(value);
         break;
       default:
-        throw new StaleElementReferenceException("Unknown element type");
+        throw new IllegalStateException("Unknown element type");
     }
   }
 
   public String getValue(String field) {
     WebElement element = getDriver().findElement(getElementLocator(field));
     ControlElement controlElement = new ControlElement(element);
-    WebElementFacade webElementFacade = new WebElementFacade(getDriver(), element, 200);
     switch (controlElement.getType()) {
       case TEXT:
       case DIV:

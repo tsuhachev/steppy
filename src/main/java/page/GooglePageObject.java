@@ -16,12 +16,12 @@ import org.openqa.selenium.WebDriver;
  * @author Tim Sukhachev
  */
 @DefaultUrl(value = "http://www.google.com.ua")
-public class MyPageObject extends BasePageObject {
+public class GooglePageObject extends BasePageObject {
 
   public static final By Q = By.name("q");
   public static final By BTN_G = By.name("btnG");
 
-  public MyPageObject(WebDriver webDriver) {
+  public GooglePageObject(WebDriver webDriver) {
     super(webDriver);
   }
 

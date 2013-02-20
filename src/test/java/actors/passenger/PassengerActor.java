@@ -5,7 +5,7 @@ package actors.passenger;
 import actors.AbstractActor;
 import data.entity.Passenger;
 import data.entity.Ticket;
-import helper.StepHelper;
+import utils.StepUtils;
 import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.pages.Pages;
 import page.PassengerForm;
@@ -48,8 +48,8 @@ public class PassengerActor extends AbstractActor {
   public void completesPassengersForm(Passenger passenger, Ticket ticket ) {
     PassengerForm passengerForm = getPages().get(PassengerForm.class);
     passengerForm.open();
-    StepHelper.populate(passengerForm, ticket);
-    StepHelper.populate(passengerForm, passenger);
+    StepUtils.populate(passengerForm, ticket);
+    StepUtils.populate(passengerForm, passenger);
     passengerForm.clickSubmitButton();
   }
 }
