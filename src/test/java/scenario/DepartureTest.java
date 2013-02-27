@@ -52,7 +52,7 @@ public class DepartureTest extends BaseTest {
   private Ticket getTicket() {
     Ticket ticket = new Ticket();
     ticket.setDepartureDate("3.03.2013");
-    ticket.setTicketClass("Econom");
+    ticket.setTicketClass("Economy");
     ticket.setDestination(City.LONDON.toString());
     return ticket;
   }

@@ -3,7 +3,6 @@ package utils;
 
 import data.entity.BaseEntity;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.pages.Pages;
 import page.BasePageObject;
 
 /**
@@ -11,16 +10,7 @@ import page.BasePageObject;
  *
  * @author Tim Sukhachev
  */
-public class StepUtils {
-  private static Pages pages;
-
-  public static Pages getPages() {
-    return pages;
-  }
-
-  public static void setPages(Pages pages) {
-    StepUtils.pages = pages;
-  }
+public class StepUtils extends StepObjectUtils {
 
   /**
    * populates fields available within the pageObject with values set at entity
@@ -38,7 +28,7 @@ public class StepUtils {
 
   @Step
   public static <P extends BasePageObject, E extends BaseEntity> void populate(Class<P> pageClass, E entity) {
-    BasePageObject pageObject = pages.get(pageClass);
+    P pageObject = getPages().get(pageClass);
     for (String field : EntityUtils.getFields(entity.getClass())) {
       pageObject.setValue(field, EntityUtils.getValueOfField(field, entity));
     }

@@ -47,14 +47,13 @@ public class PassengerActor extends AbstractActor {
 
   @StepGroup
   public void completesRegistrationForm(Passenger passenger, Ticket ticket) {
-    PassengerForm passengerForm = getPages().get(PassengerForm.class);
-    passengerForm.open();
+    getPages().get(PassengerForm.class).open();
 
     StepUtils.populate(PassengerForm.class, ticket);
     StepUtils.populate(PassengerForm.class, passenger);
 
-    CheckUtils.fieldValueIs(Ticket.DEPARTURE_DATE, ticket.getDepartureDate(), passengerForm);
+    CheckUtils.fieldValueIs(Ticket.DEPARTURE_DATE, ticket.getDepartureDate(), PassengerForm.class);
 
-    passengerForm.clickSubmitButton();
+    getPages().get(PassengerForm.class).clickSubmitButton();
   }
 }
