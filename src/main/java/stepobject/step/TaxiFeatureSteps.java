@@ -1,6 +1,6 @@
-package step;
+package stepobject.step;
 
-import actors.passenger.IPassengerAtTaxi;
+import stepobject.actors.passenger.IPassengerAtTaxi;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;

@@ -1,6 +1,4 @@
-/**
- *
- */
+
 package page;
 
 import elements.ControlElement;
@@ -19,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <b>Description:</b> This class ...
+ * <b>Description:</b> This class re
  * <br/><br/><b>Data Model Entity:</b> none
  * <br/><br/><b>Configuration:</b> none
  * <br/><br/><b>Known Issues:</b> none
@@ -67,8 +65,8 @@ public class BasePageObject extends PageObject {
   }
 
   public String getValue(String field) {
-    WebElement element = getDriver().findElement(getElementLocator(field));
-    ControlElement controlElement = new ControlElement(element);
+    final WebElement element = getDriver().findElement(getElementLocator(field));
+    final ControlElement controlElement = new ControlElement(element);
     switch (controlElement.getType()) {
       case TEXT:
       case DIV:

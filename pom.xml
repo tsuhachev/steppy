@@ -9,8 +9,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <slf4j-version>1.6.2</slf4j-version>
-        <thucydides.version>0.9.93</thucydides.version>
+        <slf4j-version>1.7.2</slf4j-version>
+        <thucydides.version>0.9.98</thucydides.version>
     </properties>
 
     <dependencies>

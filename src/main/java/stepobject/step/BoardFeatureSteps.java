@@ -1,9 +1,9 @@
 /**
  *
  */
-package step;
+package stepobject.step;
 
-import actors.passenger.IPassengerOnBoard;
+import stepobject.actors.passenger.IPassengerOnBoard;
 import data.entity.Ticket;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;

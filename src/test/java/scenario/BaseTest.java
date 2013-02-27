@@ -1,6 +1,4 @@
-package scenario; /**
- *
- */
+package scenario;
 
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
@@ -8,11 +6,7 @@ import net.thucydides.core.pages.Pages;
 import org.openqa.selenium.WebDriver;
 
 /**
- * <b>Description:</b> This class ...
- * <br/><br/><b>Data Model Entity:</b> none
- * <br/><br/><b>Configuration:</b> none
- * <br/><br/><b>Known Issues:</b> none
- *
+ * <b>Description:</b> This class represents base class for tests
  * @author Tim Sukhachev
  */
 public class BaseTest {
@@ -21,5 +15,5 @@ public class BaseTest {
   public WebDriver webdriver;
 
   @ManagedPages
-  public static Pages pages;
+  public Pages pages;
 }

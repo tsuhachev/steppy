@@ -19,9 +19,4 @@ public class CheckUtils {
   public static void fieldValueIs(String field, String value, BasePageObject pageObject) {
     Assert.assertEquals(pageObject.getValue(field), value);
   }
-
-  @Step
-  public static void currentPageIs() {
-
-  }
 }

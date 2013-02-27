@@ -3,12 +3,13 @@
  */
 package scenario;
 
-import actors.passenger.PassengerActor;
+import stepobject.actors.passenger.PassengerActor;
 import data.entity.Passenger;
 import data.entity.Ticket;
 import data.enums.City;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.junit.runners.ThucydidesRunner;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -24,28 +25,28 @@ import org.junit.runner.RunWith;
 public class DepartureTest extends BaseTest {
 
   @Steps
-  private PassengerActor passengerActor;
+  private PassengerActor passenger;
 
   @Test
   public void departByStep() {
-    passengerActor.atTaxi().getsCar();
-    passengerActor.atTaxi().paysForShuttle();
+    passenger.atTaxi().getsCar();
+    passenger.atTaxi().paysForShuttle();
 
-    passengerActor.atAirport().passesLuggageControl();
-    passengerActor.atAirport().passesGateControl();
+    passenger.atAirport().passesLuggageControl();
+    passenger.atAirport().passesGateControl();
 
-    passengerActor.onBoard().takesThePlace(getTicket());
-    passengerActor.onBoard().enjoysTheFlight();
+    passenger.onBoard().takesThePlace(getTicket());
+    passenger.onBoard().enjoysTheFlight();
   }
 
   @Test
   public void departByGroupStep() {
-    passengerActor.departs(getTicket());
+    passenger.departs(getTicket());
   }
 
   @Test
   public void populatePassengerForm() {
-    passengerActor.completesPassengersForm(getPassenger(), getTicket());
+    passenger.completesRegistrationForm(getPassenger(), getTicket());
   }
 
   private Ticket getTicket() {
@@ -58,7 +59,7 @@ public class DepartureTest extends BaseTest {
 
   private Passenger getPassenger() {
     Passenger passengerData = new Passenger();
-    passengerData.setName("John Doe");
+    passengerData.setName(RandomStringUtils.randomAlphabetic(7));
     return passengerData;
   }
 
