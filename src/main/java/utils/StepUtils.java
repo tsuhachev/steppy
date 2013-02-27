@@ -2,7 +2,6 @@
 package utils;
 
 import data.entity.BaseEntity;
-import net.thucydides.core.annotations.Step;
 import page.BasePageObject;
 
 /**
@@ -15,22 +14,27 @@ public class StepUtils extends StepObjectUtils {
   /**
    * populates fields available within the pageObject with values set at entity
    * @param pageObject
-   * @param entity
+   * @param entities
    * @param <P>
    * @param <E>
    */
-  @Step
-  public static <P extends BasePageObject, E extends BaseEntity> void populate(P pageObject, E entity) {
-    for (String field : EntityUtils.getFields(entity.getClass())) {
-      pageObject.setValue(field, EntityUtils.getValueOfField(field, entity));
+  public static <P extends BasePageObject, E extends BaseEntity> void populate(P pageObject, E... entities) {
+    for (int i = 0; i < entities.length; i++) {
+      for (String field : EntityUtils.getFields(entities[i].getClass())) {
+        pageObject.setValue(field, EntityUtils.getValueOfField(field, entities[i]));
+      }
     }
   }
 
-  @Step
-  public static <P extends BasePageObject, E extends BaseEntity> void populate(Class<P> pageClass, E entity) {
-    P pageObject = getPages().get(pageClass);
-    for (String field : EntityUtils.getFields(entity.getClass())) {
-      pageObject.setValue(field, EntityUtils.getValueOfField(field, entity));
-    }
+  /**
+   * populates fields available within the pageObject with values set at entity
+   * @param pageClass
+   * @param entities
+   * @param <P>
+   * @param <E>
+   */
+  public static <P extends BasePageObject, E extends BaseEntity> void populate(Class<P> pageClass, E... entities) {
+    P pageObject = pages.get(pageClass);
+    populate(pageObject, entities);
   }
 }

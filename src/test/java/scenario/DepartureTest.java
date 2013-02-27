@@ -3,7 +3,6 @@
  */
 package scenario;
 
-import stepobject.actors.passenger.PassengerActor;
 import data.entity.Passenger;
 import data.entity.Ticket;
 import data.enums.City;
@@ -12,6 +11,7 @@ import net.thucydides.junit.runners.ThucydidesRunner;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import stepobject.actors.passenger.PassengerActor;
 
 /**
  * <b>Description:</b> This class ...
@@ -27,6 +27,9 @@ public class DepartureTest extends BaseTest {
   @Steps
   private PassengerActor passenger;
 
+  /**
+   * test with local step usage
+   */
   @Test
   public void departByStep() {
     passenger.atTaxi().getsCar();
@@ -39,15 +42,23 @@ public class DepartureTest extends BaseTest {
     passenger.onBoard().enjoysTheFlight();
   }
 
+  /**
+   * test with global step usage
+   */
   @Test
   public void departByGroupStep() {
     passenger.departs(getTicket());
   }
 
+  /**
+   * test with generic steps usage
+   */
   @Test
   public void populatePassengerForm() {
     passenger.completesRegistrationForm(getPassenger(), getTicket());
   }
+
+  /* data */
 
   private Ticket getTicket() {
     Ticket ticket = new Ticket();

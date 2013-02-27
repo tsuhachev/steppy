@@ -6,7 +6,7 @@ import data.entity.Passenger;
 import data.entity.Ticket;
 import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.pages.Pages;
-import page.PassengerForm;
+import page.PassengerRegistrationFormPage;
 import stepobject.actors.AbstractActor;
 import stepobject.step.AirportFeatureSteps;
 import stepobject.step.BoardFeatureSteps;
@@ -47,13 +47,11 @@ public class PassengerActor extends AbstractActor {
 
   @StepGroup
   public void completesRegistrationForm(Passenger passenger, Ticket ticket) {
-    getPages().get(PassengerForm.class).open();
+    getPages().get(PassengerRegistrationFormPage.class).open();
 
-    StepUtils.populate(PassengerForm.class, ticket);
-    StepUtils.populate(PassengerForm.class, passenger);
+    StepUtils.populate(PassengerRegistrationFormPage.class, ticket, passenger);
+    CheckUtils.fieldValueIs(PassengerRegistrationFormPage.class, Ticket.DEPARTURE_DATE, ticket.getDepartureDate());
 
-    CheckUtils.fieldValueIs(Ticket.DEPARTURE_DATE, ticket.getDepartureDate(), PassengerForm.class);
-
-    getPages().get(PassengerForm.class).clickSubmitButton();
+    getPages().get(PassengerRegistrationFormPage.class).clickSubmitButton();
   }
 }

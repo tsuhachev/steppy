@@ -13,11 +13,11 @@ import org.openqa.selenium.WebDriver;
  * @author Tim Sukhachev
  */
 @DefaultUrl("https://docs.google.com/spreadsheet/viewform?formkey=dHNMdnB4dl95SmZJU09VRC1GSDUzbUE6MQ")
-public class PassengerForm extends BasePageObject {
+public class PassengerRegistrationFormPage extends BasePageObject {
 
   public static final By SUBMIT = By.name("submit");
 
-  public PassengerForm(WebDriver webDriver) {
+  public PassengerRegistrationFormPage(WebDriver webDriver) {
     super(webDriver);
     mapping();
   }

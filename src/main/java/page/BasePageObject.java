@@ -32,6 +32,11 @@ public class BasePageObject extends PageObject {
 
   protected Map<String, By> elementsMap = new HashMap<String, By>();
 
+  /**
+   * set value to a field available at elementsMap
+   * @param field
+   * @param value
+   */
   public void setValue(String field, String value) {
     if (value == null) {
       return;
@@ -64,6 +69,11 @@ public class BasePageObject extends PageObject {
     }
   }
 
+  /**
+   * gets value of field available at elementsMap
+   * @param field
+   * @return
+   */
   public String getValue(String field) {
     final WebElement element = getDriver().findElement(getElementLocator(field));
     final ControlElement controlElement = new ControlElement(element);

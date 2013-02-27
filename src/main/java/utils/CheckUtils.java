@@ -1,7 +1,6 @@
 
 package utils;
 
-import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 import page.BasePageObject;
 
@@ -11,9 +10,8 @@ import page.BasePageObject;
  */
 public class CheckUtils extends StepObjectUtils {
 
-  @Step
-  public static <P extends BasePageObject> void fieldValueIs(String field, String value, final Class<P> pageObjectClass) {
-    P pageObject = getPages().get(pageObjectClass);
+  public static <P extends BasePageObject> void fieldValueIs(final Class<P> pageObjectClass, String field, String value) {
+    P pageObject = pages.get(pageObjectClass);
     Assert.assertEquals(pageObject.getValue(field), value);
   }
 }
