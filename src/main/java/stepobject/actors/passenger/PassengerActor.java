@@ -2,16 +2,17 @@
 package stepobject.actors.passenger;
 
 
-import stepobject.actors.AbstractActor;
 import data.entity.Passenger;
 import data.entity.Ticket;
-import utils.StepUtils;
 import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.pages.Pages;
 import page.PassengerForm;
+import stepobject.actors.AbstractActor;
 import stepobject.step.AirportFeatureSteps;
 import stepobject.step.BoardFeatureSteps;
 import stepobject.step.TaxiFeatureSteps;
+import utils.CheckUtils;
+import utils.StepUtils;
 
 /**
  * <b>Description:</b> This class represents Passenger end user
@@ -50,6 +51,9 @@ public class PassengerActor extends AbstractActor {
     passengerForm.open();
     StepUtils.populate(PassengerForm.class, ticket);
     StepUtils.populate(PassengerForm.class, passenger);
+
+    CheckUtils.fieldValueIs(Ticket.DEPARTURE_DATE, ticket.getDepartureTime(), passengerForm);
+
     passengerForm.clickSubmitButton();
   }
 }
