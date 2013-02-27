@@ -1,22 +1,16 @@
-/**
- *
- */
+
 package data.entity;
 
 /**
- * <b>Description:</b> This class ...
- * <br/><br/><b>Data Model Entity:</b> none
- * <br/><br/><b>Configuration:</b> none
- * <br/><br/><b>Known Issues:</b> none
- *
+ * <b>Description:</b> This class represents Ticket entity
  * @author Tim Sukhachev
  */
 public class Ticket extends BaseEntity {
 
   private String destination;
   public static final String DESTINATION = "destination";
-  private String departureTime;
-  public static final String DEPARTURE_DATE = "departureTime";
+  private String departureDate;
+  public static final String DEPARTURE_DATE = "departureDate";
   private String ticketClass;
 
   public String getTicketClass() {
@@ -37,11 +31,11 @@ public class Ticket extends BaseEntity {
     this.destination = destination;
   }
 
-  public String getDepartureTime() {
-    return departureTime;
+  public String getDepartureDate() {
+    return departureDate;
   }
 
-  public void setDepartureTime(String departureTime) {
-    this.departureTime = departureTime;
+  public void setDepartureDate(String departureDate) {
+    this.departureDate = departureDate;
   }
 }

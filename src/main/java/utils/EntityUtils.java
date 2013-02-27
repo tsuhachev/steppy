@@ -12,9 +12,6 @@ import java.util.List;
 
 /**
  * <b>Description:</b> This class represents entity helper
- * <br/><br/><b>Data Model Entity:</b> none
- * <br/><br/><b>Configuration:</b> none
- * <br/><br/><b>Known Issues:</b> none
  *
  * @author Tim Sukhachev
  */
@@ -41,13 +38,13 @@ public class EntityUtils {
   }
 
   /**
-   * @param cls
+   * @param entityClass
    * @param <E>
    * @return names of all private and non-static fields defined at cls and its super classes
    */
-  public static <E extends BaseEntity> List<String> getFields(Class<E> cls) {
+  public static <E extends BaseEntity> List<String> getFields(Class<E> entityClass) {
     List<String> list = new ArrayList<String>();
-    for (Class superClass = cls; superClass != Object.class; superClass = superClass.getSuperclass()) {
+    for (Class superClass = entityClass; superClass != Object.class; superClass = superClass.getSuperclass()) {
       Field[] fields = superClass.getDeclaredFields();
       for (Field field : fields) {
         int modifier = field.getModifiers();

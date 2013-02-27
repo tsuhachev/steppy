@@ -7,7 +7,7 @@ import net.thucydides.core.pages.Pages;
 import page.BasePageObject;
 
 /**
- * <b>Description:</b> This class represents generic stepobject.step object
+ * <b>Description:</b> This class represents generic step object
  *
  * @author Tim Sukhachev
  */

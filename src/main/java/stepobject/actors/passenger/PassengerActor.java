@@ -49,10 +49,11 @@ public class PassengerActor extends AbstractActor {
   public void completesRegistrationForm(Passenger passenger, Ticket ticket) {
     PassengerForm passengerForm = getPages().get(PassengerForm.class);
     passengerForm.open();
+
     StepUtils.populate(PassengerForm.class, ticket);
     StepUtils.populate(PassengerForm.class, passenger);
 
-    CheckUtils.fieldValueIs(Ticket.DEPARTURE_DATE, ticket.getDepartureTime(), passengerForm);
+    CheckUtils.fieldValueIs(Ticket.DEPARTURE_DATE, ticket.getDepartureDate(), passengerForm);
 
     passengerForm.clickSubmitButton();
   }

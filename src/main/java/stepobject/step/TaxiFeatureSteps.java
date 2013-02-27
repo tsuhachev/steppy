@@ -7,10 +7,7 @@ import net.thucydides.core.steps.ScenarioSteps;
 import page.GooglePageObject;
 
 /**
- * <b>Description:</b> This class ...
- * <br/><br/><b>Data Model Entity:</b> none
- * <br/><br/><b>Configuration:</b> none
- * <br/><br/><b>Known Issues:</b> none
+ * <b>Description:</b> This class represents step object for Taxi feature
  *
  * @author Tim Sukhachev
  */

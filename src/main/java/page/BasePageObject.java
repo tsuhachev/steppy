@@ -69,6 +69,7 @@ public class BasePageObject extends PageObject {
     final ControlElement controlElement = new ControlElement(element);
     switch (controlElement.getType()) {
       case TEXT:
+        return element.getAttribute(HTML.Attribute.VALUE.toString());
       case DIV:
       case TEXT_AREA:
       case BUTTON:

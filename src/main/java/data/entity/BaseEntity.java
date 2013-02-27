@@ -1,6 +1,4 @@
-/**
- *
- */
+
 package data.entity;
 
 import utils.EntityUtils;
@@ -9,9 +7,6 @@ import java.util.List;
 
 /**
  * <b>Description:</b> This class is just an entity marker
- * <br/><br/><b>Data Model Entity:</b> none
- * <br/><br/><b>Configuration:</b> none
- * <br/><br/><b>Known Issues:</b> none
  *
  * @author Tim Sukhachev
  */

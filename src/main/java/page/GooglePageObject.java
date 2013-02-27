@@ -8,10 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * <b>Description:</b> This class ...
- * <br/><br/><b>Data Model Entity:</b> none
- * <br/><br/><b>Configuration:</b> none
- * <br/><br/><b>Known Issues:</b> none
+ * <b>Description:</b> This class represents page object for google
  *
  * @author Tim Sukhachev
  */

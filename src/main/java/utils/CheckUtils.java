@@ -6,11 +6,7 @@ import org.junit.Assert;
 import page.BasePageObject;
 
 /**
- * <b>Description:</b> This class ...
- * <br/><br/><b>Data Model Entity:</b> none
- * <br/><br/><b>Configuration:</b> none
- * <br/><br/><b>Known Issues:</b> none
- *
+ * <b>Description:</b> This class represents generic steps used for verification
  * @author Tim Sukhachev
  */
 public class CheckUtils {

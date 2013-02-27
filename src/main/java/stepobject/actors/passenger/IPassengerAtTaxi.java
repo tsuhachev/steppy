@@ -4,10 +4,7 @@
 package stepobject.actors.passenger;
 
 /**
- * <b>Description:</b> This class ...
- * <br/><br/><b>Data Model Entity:</b> none
- * <br/><br/><b>Configuration:</b> none
- * <br/><br/><b>Known Issues:</b> none
+ * <b>Description:</b> This class maps passenger steps upon Taxi feature
  *
  * @author Tim Sukhachev
  */
